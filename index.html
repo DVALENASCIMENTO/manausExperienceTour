@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Manaus Experience – Tarde Amazônica</title>
+  <!-- favicon / logomarca no head -->
+  <link rel="icon" href="img/logo.png" type="image/png" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <!-- POPUP de abertura -->
+  <div id="popup" class="popup" role="dialog" aria-modal="true" aria-label="Bem-vindo ao Manaus Experience">
+    <div class="popup-overlay"></div>
+    <div class="popup-content" role="document">
+      <img src="img/logo.png" alt="Logo Manaus Experience" class="popup-logo" />
+      <h1>Manaus Experience – Tarde Amazônica</h1>
+      <p class="popup-desc">Transporte e experiência local</p>
+      <div class="popup-actions">
+        <button id="btn-start" class="btn-primary">Iniciar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Áudio de fundo (sem autoplay forçado) -->
+  <audio id="bg-music" loop preload="auto">
+    <source src="audio/amazonia.mp3" type="audio/mpeg" />
+    Seu navegador não suporta áudio.
+  </audio>
+
+  <!-- Header com controle de música -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand">
+        <img src="img/logo.png" alt="Logo Manaus Experience" class="logo" />
+        <span class="brand-title">Manaus Experience</span>
+      </div>
+
+      <nav class="nav">
+        <a href="#tour">Tour</a>
+        <a href="#contato">Contato</a>
+      </nav>
+
+      <div class="controls">
+        <button id="music-toggle" class="btn-control" aria-pressed="false" title="Tocar / Pausar música">▶︎</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Conteúdo principal -->
+  <main>
+    <section id="hero" class="hero">
+      <div class="hero-inner">
+        <h2>Tarde Amazônica • 14h às 17h</h2>
+        <p>INPA • Zoológico CIGS  • Ponte Rio Negro • Ponta Negra</p>
+        <a href="#contato" class="btn-primary">Reservar / Contato</a>
+      </div>
+    </section>
+
+    <section id="tour" class="tour container">
+      <h2>Roteiro</h2>
+      <p class="lead">Visite os principais pontos em um passeio de 3 horas.</p>
+
+      <div class="cards">
+        <article class="card">
+          <img src="img/zoologico.jpg" alt="Zoológico CIGS" />
+          <h3>Zoológico CIGS</h3>
+          <p>Fauna amazônica e observação de espécies regionais.</p>
+        </article>
+
+        <article class="card">
+          <img src="img/inpa.jpg" alt="INPA - Bosque da Ciência" />
+          <h3>INPA - Bosque da Ciência</h3>
+          <p>Trilhas, tanques de pesquisa e peixes-bois.</p>
+        </article>
+
+        <article class="card">
+          <img src="img/ponte_rio_negro.jpg" alt="Ponte Rio Negro" />
+          <h3>Ponte Rio Negro</h3>
+          <p>Parada panorâmica para fotos e explicações.</p>
+        </article>
+
+        <article class="card">
+          <img src="img/ponta_negra.jpg" alt="Ponta Negra" />
+          <h3>Ponta Negra</h3>
+          <p>Orla, pôr do sol e encerramento do passeio.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contato" class="contato container">
+      <h2>Contato e Reserva</h2>
+      <p class="lead">Reservas e informações: Diego Vale do Nascimento</p>
+
+      <form id="contact-form" class="form">
+        <div class="form-row">
+          <input type="text" name="nome" id="nome" placeholder="Nome" required />
+          <input type="tel" name="telefone" id="telefone" placeholder="Telefone / WhatsApp" required />
+        </div>
+        <input type="email" name="email" id="email" placeholder="E-mail" required />
+        <textarea name="mensagem" id="mensagem" placeholder="Mensagem / Data desejada" rows="4" required></textarea>
+        <div class="form-actions">
+          <button type="submit" class="btn-primary">Enviar mensagem</button>
+        </div>
+      </form>
+
+      <div class="contact-info">
+        <p><strong>WhatsApp:</strong> <a href="https://wa.me/SEU_NUMERO" target="_blank" rel="noopener">SEU_NUMERO</a></p>
+        <p><strong>Instagram:</strong> <a href="https://instagram.com/SEU_USUARIO" target="_blank" rel="noopener">@SEU_USUARIO</a></p>
+        <p><strong>Preço:</strong> R$ 400 por carro (1 a 3 passageiros) • 14h–17h</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Manaus Experience – Diego Vale do Nascimento. Todos os direitos reservados.</p>
+      <div class="social">
+        <a href="https://wa.me/SEU_NUMERO" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="https://instagram.com/SEU_USUARIO" target="_blank" rel="noopener">Instagram</a>
+        <a href="mailto:seuemail@exemplo.com">E-mail</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
