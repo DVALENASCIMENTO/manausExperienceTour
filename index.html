@@ -3,16 +3,15 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Manaus Experience – Tarde Amazônica</title>
-  <!-- favicon / logomarca no head -->
+  <title>Manaus Experience Tour – Tarde Amazônica</title>
   <link rel="icon" href="img/logo.png" type="image/png" />
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
   <!-- POPUP de abertura -->
-  <div id="popup" class="popup" role="dialog" aria-modal="true" aria-label="Bem-vindo ao Manaus Experience">
+  <div id="popup" class="popup" role="dialog" aria-modal="true">
     <div class="popup-overlay"></div>
-    <div class="popup-content" role="document">
+    <div class="popup-content">
       <img src="img/logo.png" alt="Logo Manaus Experience" class="popup-logo" />
       <h1>Manaus Experience Tour</h1>
       <p class="popup-desc">Tarde Amazônica</p>
@@ -22,93 +21,90 @@
     </div>
   </div>
 
-  <!-- Áudio de fundo (sem autoplay forçado) -->
+  <!-- Áudio -->
   <audio id="bg-music" loop preload="auto">
-    <source src="audio/Porto_de_Lenha.mp3
-    " type="audio/mpeg" />
-    Seu navegador não suporta áudio.
+    <source src="audio/Porto_de_Lenha.mp3" type="audio/mpeg" />
   </audio>
 
-  <!-- Header com controle de música -->
+  <!-- Header -->
   <header class="site-header">
     <div class="header-inner">
       <div class="brand">
         <img src="img/logo.png" alt="Logo Manaus Experience" class="logo" />
-        <span class="brand-title">Manaus Experience Tour</span>
+        <span class="brand-title" data-translate="brandTitle">Manaus Experience Tour</span>
       </div>
 
       <nav class="nav">
-        <a href="#tour">Tour</a>
-        <a href="#contato">Contato</a>
+        <a href="#tour" data-translate="navTour">Tour</a>
+        <a href="#contato" data-translate="navContact">Contato</a>
       </nav>
 
       <div class="controls">
-        <button id="music-toggle" class="btn-control" aria-pressed="false" title="Tocar / Pausar música">▶︎</button>
+        <button id="music-toggle" class="btn-control" title="Tocar / Pausar música">▶︎</button>
       </div>
-    </div>
+
+      <!-- Bandeiras de idiomas -->
+      <div class="language-selector">
+        <img src="img/flags/br.png" alt="Português" class="flag" data-lang="pt">
+        <img src="img/flags/en.png" alt="English" class="flag" data-lang="en">
+        <img src="img/flags/es.png" alt="Español" class="flag" data-lang="es">
+        <img src="img/flags/fr.png" alt="Français" class="flag" data-lang="fr">
+        <img src="img/flags/it.png" alt="Italiano" class="flag" data-lang="it">
+        <img src="img/flags/de.png" alt="Deutsch" class="flag" data-lang="de">
+        <img src="img/flags/jp.png" alt="日本語" class="flag" data-lang="jp">      </div>
+      </div>
   </header>
 
-  <!-- Conteúdo principal -->
+  <!-- Conteúdo -->
   <main>
     <section id="hero" class="hero">
       <div class="hero-inner">
-        <h2>Tarde Amazônica</h2>
-        <p>INPA • Zoológico CIGS  • Ponte Rio Negro • Ponta Negra</p>
-        <a href="#contato" class="btn-primary">Reservar / Contato</a>
+        <h2 data-translate="heroTitle">Tarde Amazônica</h2>
+        <p data-translate="heroSubtitle">INPA • Zoológico CIGS • Ponte Rio Negro • Ponta Negra</p>
       </div>
     </section>
 
     <section id="tour" class="tour container">
-      <h2>Roteiro</h2>
-      <p class="lead">O passeio Tarde Amazônica começa no Bosque da Ciência do INPA, onde se conhecem espécies como peixe-boi, ariranhas e jacarés, com trilhas educativas sobre conservação. Segue para o Zoo do CIGS, que abriga diversas espécies da fauna amazônica e colabora com pesquisas científicas. Depois, passa pela Ponte Rio Negro, obra de engenharia que liga Manaus a municípios vizinhos e se destaca pela arquitetura. Finaliza na Ponta Negra, área revitalizada às margens do Rio Negro, com lazer, gastronomia e eventos culturais, oferecendo vistas encantadoras do rio.</p>
+      <h2 data-translate="tourTitle">Roteiro</h2>
+      <p class="lead" data-translate="tourText">
+        O passeio Tarde Amazônica começa no Bosque da Ciência do INPA, onde se conhecem espécies como peixe-boi, ariranhas e jacarés, com trilhas educativas sobre conservação. Segue para o Zoo do CIGS, que abriga diversas espécies da fauna amazônica e colabora com pesquisas científicas. Depois, passa pela Ponte Rio Negro, obra de engenharia que liga Manaus a municípios vizinhos e se destaca pela arquitetura. Finaliza na Ponta Negra, área revitalizada às margens do Rio Negro, com lazer, gastronomia e eventos culturais, oferecendo vistas encantadoras do rio.
+      </p>
 
       <div class="cards">
         <article class="card">
           <img src="img/inpa.jpeg" alt="INPA - Bosque da Ciência" />
-          <h3>INPA - Bosque da Ciência</h3>
-          <p>O Bosque da Ciência apresenta a fauna amazônica, como peixe-boi, ariranhas e jacarés, e oferece trilhas e atividades educativas sobre conservação ambiental.</p>
+          <h3 data-translate="inpaTitle">INPA - Bosque da Ciência</h3>
+          <p data-translate="inpaText">O Bosque da Ciência apresenta a fauna amazônica, como peixe-boi, ariranhas e jacarés, e oferece trilhas e atividades educativas sobre conservação ambiental.</p>
         </article>
 
         <article class="card">
           <img src="img/cigs.jpg" alt="Zoológico CIGS" />
-          <h3>Zoológico CIGS</h3>
-          <p>O Zoo do CIGS abriga diversas espécies da Amazônia e realiza pesquisas científicas, além de promover educação ambiental e receber visitantes de escolas e turistas.</p>
+          <h3 data-translate="cigsTitle">Zoológico CIGS</h3>
+          <p data-translate="cigsText">O Zoo do CIGS abriga diversas espécies da Amazônia e realiza pesquisas científicas, além de promover educação ambiental e receber visitantes de escolas e turistas.</p>
         </article>
 
         <article class="card">
           <img src="img/Ponte-Rio-Negro.jpg" alt="Ponte Rio Negro" />
-          <h3>Ponte Rio Negro</h3>
-          <p>A Ponte Rio Negro, com suas quatro faixas e calçadas, liga Manaus a municípios vizinhos e é um marco da engenharia e arquitetura amazônica.</p>
+          <h3 data-translate="ponteTitle">Ponte Rio Negro</h3>
+          <p data-translate="ponteText">A Ponte Rio Negro, com suas quatro faixas e calçadas, liga Manaus a municípios vizinhos e é um marco da engenharia e arquitetura amazônica.</p>
         </article>
 
         <article class="card">
           <img src="img/Ponta_Negra.jpg" alt="Ponta Negra" />
-          <h3>Ponta Negra</h3>
-          <p>A Ponta Negra, às margens do Rio Negro, é área de lazer com calçadões, bares, restaurantes e espaço para eventos culturais, oferecendo belas vistas do rio.</p>
+          <h3 data-translate="pontaTitle">Ponta Negra</h3>
+          <p data-translate="pontaText">A Ponta Negra, às margens do Rio Negro, é área de lazer com calçadões, bares, restaurantes e espaço para eventos culturais, oferecendo belas vistas do rio.</p>
         </article>
       </div>
     </section>
 
     <section id="contato" class="contato container">
-      <h2>Contato e Reserva</h2>
-      <p class="lead">Reservas e informações: Diego Vale do Nascimento</p>
+      <h2 data-translate="contactTitle">Contato e Reserva</h2>
+      <p class="lead" data-translate="contactInfo">Reservas e informações: Diego Nascimento</p>
 
-      <form id="contact-form" class="form">
-        <div class="form-row">
-          <input type="text" name="nome" id="nome" placeholder="Nome" required />
-          <input type="tel" name="telefone" id="telefone" placeholder="Telefone / WhatsApp" required />
-        </div>
-        <input type="email" name="email" id="email" placeholder="E-mail" required />
-        <textarea name="mensagem" id="mensagem" placeholder="Mensagem / Data desejada" rows="4" required></textarea>
-        <div class="form-actions">
-          <button type="submit" class="btn-primary">Enviar mensagem</button>
-        </div>
-      </form>
-
+      <!-- Removido o formulário -->
       <div class="contact-info">
-        <p><strong>WhatsApp:</strong> <a href="https://wa.me/5592995178534" target="_blank" rel="noopener">(92)99517-8534</a></p>
-        <p><strong>Instagram:</strong> <a href="https://instagram.com/SEU_USUARIO" target="_blank" rel="noopener">@SEU_USUARIO</a></p>
-        <p><strong>horário:</strong>14h – 17h • (1 a 4 passageiros)</p>
+        <a href="https://wa.me/5592995178534" target="_blank" class="btn-primary">💬 WhatsApp</a>
+        <p><strong>Horário:</strong> 14h – 17h • (1 a 4 passageiros)</p>
       </div>
     </section>
   </main>
@@ -117,14 +113,10 @@
   <footer class="site-footer">
     <div class="container footer-inner">
       <p>© <span id="year"></span> Manaus Experience Tour – Diego Nascimento. Todos os direitos reservados.</p>
-      <div class="social">
-        <a href="https://wa.me/SEU_NUMERO" target="_blank" rel="noopener">WhatsApp</a>
-        <a href="https://instagram.com/SEU_USUARIO" target="_blank" rel="noopener">Instagram</a>
-        <a href="mailto:seuemail@exemplo.com">E-mail</a>
-      </div>
     </div>
   </footer>
 
   <script src="js/script.js"></script>
+  <script src="js/translate.js"></script>
 </body>
 </html>

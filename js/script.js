@@ -3,7 +3,6 @@ const popup = document.getElementById('popup');
 const btnStart = document.getElementById('btn-start');
 const bgMusic = document.getElementById('bg-music');
 const musicToggle = document.getElementById('music-toggle');
-const contactForm = document.getElementById('contact-form');
 const yearEl = document.getElementById('year');
 
 // Mostra ano no footer
@@ -50,22 +49,3 @@ btnStart.addEventListener('keyup', (e) => {
   if (e.key === 'Enter' || e.key === ' ') btnStart.click();
 });
 
-// Formulário de contato (simulação de envio)
-contactForm.addEventListener('submit', (e) => {
-  e.preventDefault();
-  const nome = document.getElementById('nome').value.trim();
-  const telefone = document.getElementById('telefone').value.trim();
-  const email = document.getElementById('email').value.trim();
-  const mensagem = document.getElementById('mensagem').value.trim();
-
-  // validação simples
-  if (!nome || !telefone || !email || !mensagem) {
-    alert('Por favor, preencha todos os campos.');
-    return;
-  }
-
-  // Aqui você pode integrar com WhatsApp API, enviar para seu e-mail ou salvar em backend.
-  // Por enquanto mostramos uma confirmação e limpamos o formulário:
-  alert(`Obrigado, ${nome}! Sua mensagem foi recebida.\nEntraremos em contato pelo WhatsApp: ${telefone}`);
-  contactForm.reset();
-});
